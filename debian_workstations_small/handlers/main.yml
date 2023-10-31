@@ -1,0 +1,6 @@
+---
+# handlers file for debian_workstations
+- name: Output var to the screen
+  debug: var="{{ item }}.stdout_lines" 
+  with_items:
+  - "{{ output_var.results }}"

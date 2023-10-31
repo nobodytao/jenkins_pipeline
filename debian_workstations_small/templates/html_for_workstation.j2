@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The following commands were executed on your PC</title>
+</head>
+<body>
+ <h2>Hello! On your PC were executed the following commands from server</h2>
+ <p>{% for command in commands_for_debian %}<b>{{ command }}</b><br>{% endfor %}</p>
+ <br>
+ <h2>Results:</h2>
+ {% for one_item in output_var.results %}
+  <h3>{{ one_item.cmd}}:</h3>
+  {{ one_item.stdout_lines | to_nice_yaml }}
+  <br>
+ {% endfor %}
+</body>
+</html>

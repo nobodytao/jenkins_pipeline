@@ -1,0 +1,8 @@
+---
+# tasks file for debian_workstations
+- name: Information about workstations - whoami
+  command: "{{ item }}"
+  register: output_var
+  with_items:
+  - "{{ commands_for_debian }}"
+  notify: Output var to the screen

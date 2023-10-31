@@ -1,0 +1,13 @@
+---
+# vars file for debian_workstations
+commands_for_debian:
+ - whoami
+ - ip a
+ - free -m
+commands_for_debian_dragon:
+ - date
+ - df
+html_path: ./ansible/reports/
+html_name: server_report.html
+
+

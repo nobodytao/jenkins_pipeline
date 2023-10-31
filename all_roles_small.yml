@@ -1,0 +1,5 @@
+- name: Roles config
+  hosts: workstations_debian_small
+  gather_facts: false
+  roles:
+   - debian_workstations_small
